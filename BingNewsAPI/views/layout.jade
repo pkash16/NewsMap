@@ -1,0 +1,32 @@
+﻿doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/NewsStyle.css')
+    script(src = '/javascripts/bootstrap.min.js')
+    script(src = 'https://maps.googleapis.com/maps/api/js?key=#{key}')
+    script(src = 'http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js')
+  body
+    block navBar
+        nav(class='navbar navbar-default', role='navigation')
+            .container-fluid
+                .navbar-header
+                    button(class='navbar-toggle', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                        span.sronly
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a(class='navbar-brand', href='/#')
+                        b NewsMap
+                #bs-example-navbar-collapse-1(class='collapse navbar-collapse')
+                    ul(class='nav navbar-nav')
+                        li
+                            a(href='/#') Map
+                        li
+                            a(href='/settings') Settings
+    block pageTitle
+    block pageContent
+    block closingScript
+        script(src = '/javascripts/jquery.js')
+    block addedScripts

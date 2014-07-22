@@ -1,0 +1,19 @@
+﻿extends layout
+
+block pageTitle
+
+block pageContent
+    #map-canvas
+    .infobox-wrapper
+      #infobox
+        h3#country
+        img#loading(src = "/gifs/loading.gif")
+        h6#title
+        h6#snip
+        h6#url
+        h6#source
+        h6#date
+        span#backwards(class = "glyphicon glyphicon-chevron-left")
+        span#forwards(class = "glyphicon glyphicon-chevron-right")
+block addedScripts
+    script(src = '/javascripts/maps.js')

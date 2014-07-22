@@ -1,0 +1,26 @@
+﻿extends layout
+
+block pageTitle
+    .container
+        .well
+            h1 Settings
+block pageContent
+    .container
+        h3 Scale of Search
+        span 
+            select#settings(onClick = 'setSetting')
+                option(value='1') 1 (Country Level)
+                option(value = '2') 2 (State Level)
+                option(value = '3') 3 (District Level)*
+                option(value = '4') 4 (City Level)*
+
+        div
+            h3 Category(ex. 'sports news', 'politics', etc)**
+            input#filter(type = "text", name = "filter")
+        div
+            h3 Size of Search (1 by default)
+            input#size(type = "text", name = "size")
+        h6 *Not all places will have city/district level!
+        h6 **Leave blank for all news
+block addedScripts
+    script(src = '/javascripts/settings.js')
